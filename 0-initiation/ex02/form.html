@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+    </style>
+
+    <!-- Link js file -->
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      <form>
+        <label for="firstname">Firstname:</label>
+        <input
+          type="text"
+          name="firstname"
+          id="firstname"
+          placeholder="Your first name"
+        />
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Your name" />
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" placeholder="Your age" />
+
+        <label for="phone">Phone:</label>
+        <input type="number" name="phone" id="phone" placeholder="Your phone" />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Your email" />
+
+        <label for="student">Student at 42:</label>
+        <input
+          type="checkbox"
+          name="student"
+          id="student"
+          placeholder="Are u a student"
+        />
+
+        <!-- Create fieldset to select if the person is stundet or staff -->
+
+        <fieldset>
+          <legend>Are you a student or staff?</legend>
+          <input type="radio" name="gender" id="gender_male" value="Male" />
+          <label for="gender_male">Male</label>
+          <input type="radio" name="gender" id="gender_female" value="Female" />
+          <label for="gender_female">Female</label>
+          <input type="radio" name="gender" id="gender_other" value="Other" />
+          <label for="gender_other">Other</label>
+        </fieldset>
+
+        <!-- Submit button -->
+        <input type="submit" value="Submit" onclick="displayFormContents()" />
+      </form>
+    </div>
+  </body>
+</html>
